@@ -44,7 +44,7 @@ class ViewController: UIViewController, UITextViewDelegate {
             }
             //writing preferences
             let preferences = UserDefaults.standard
-            preferences.set(self.user, forKey: "rfid")
+            preferences.set(self.user, forKey: "user")
             preferences.synchronize()
             
             //open next Screen
@@ -53,6 +53,33 @@ class ViewController: UIViewController, UITextViewDelegate {
             self.present(nextViewController, animated:true, completion:nil);
         }
     }
+    
+    
+    @IBAction func registerButton(_ sender: Any) {
+        //erweitere String
+        let appendString = user+email
+        //Sign in the user with Firebase
+        Auth.auth().createUser(withEmail: appendString, password: password) { (user, error) in
+            //Prüfen ob es einen User gibt
+            if user != nil{
+                //writing preference
+                
+                let preferences = UserDefaults.standard
+                preferences.set(self.user, forKey: "user")
+                preferences.synchronize()
+                
+                //open next Screen
+                let storyBoard = UIStoryboard(name: "Main", bundle:nil);
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginScene") ;
+                self.present(nextViewController, animated:true, completion:nil);
+            }
+            else{
+                //Fehler
+            }
+        }
+    }
+    
+    
     
     
     override func viewDidLoad() {

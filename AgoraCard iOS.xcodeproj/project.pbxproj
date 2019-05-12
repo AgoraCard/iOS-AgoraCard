@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2810ABF9228820A200B2F7EE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810ABF7228820A200B2F7EE /* TableViewCell.swift */; };
+		2810ABFA228820A200B2F7EE /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2810ABF8228820A200B2F7EE /* TableViewCell.xib */; };
 		282BCC4A227C4AB600D392E4 /* ViewLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282BCC49227C4AB600D392E4 /* ViewLogin.swift */; };
 		282BCC4C227C4AD600D392E4 /* ViewUebersicht.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282BCC4B227C4AD600D392E4 /* ViewUebersicht.swift */; };
-		282BCC4E227C4AF700D392E4 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282BCC4D227C4AF700D392E4 /* RegisterController.swift */; };
 		282BCC52227C4CF000D392E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 282BCC51227C4CF000D392E4 /* Assets.xcassets */; };
 		286ED4BB227C412C00946DF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286ED4BA227C412C00946DF9 /* AppDelegate.swift */; };
 		286ED4BD227C412C00946DF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286ED4BC227C412C00946DF9 /* ViewController.swift */; };
@@ -20,9 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2810ABF7228820A200B2F7EE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		2810ABF8228820A200B2F7EE /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		282BCC49227C4AB600D392E4 /* ViewLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLogin.swift; sourceTree = "<group>"; };
 		282BCC4B227C4AD600D392E4 /* ViewUebersicht.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUebersicht.swift; sourceTree = "<group>"; };
-		282BCC4D227C4AF700D392E4 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		282BCC51227C4CF000D392E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		286ED4B7227C412C00946DF9 /* AgoraCard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgoraCard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		286ED4BA227C412C00946DF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2810ABF622881FFA00B2F7EE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2810ABF7228820A200B2F7EE /* TableViewCell.swift */,
+				2810ABF8228820A200B2F7EE /* TableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		286ED4AE227C412C00946DF9 = {
 			isa = PBXGroup;
 			children = (
@@ -69,11 +80,11 @@
 		286ED4B9227C412C00946DF9 /* AgoraCard iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2810ABF622881FFA00B2F7EE /* Cell */,
 				286ED4BA227C412C00946DF9 /* AppDelegate.swift */,
 				286ED4BC227C412C00946DF9 /* ViewController.swift */,
 				282BCC49227C4AB600D392E4 /* ViewLogin.swift */,
 				282BCC4B227C4AD600D392E4 /* ViewUebersicht.swift */,
-				282BCC4D227C4AF700D392E4 /* RegisterController.swift */,
 				286ED4BE227C412C00946DF9 /* Main.storyboard */,
 				282BCC51227C4CF000D392E4 /* Assets.xcassets */,
 				286ED4C3227C412E00946DF9 /* LaunchScreen.storyboard */,
@@ -161,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				282BCC52227C4CF000D392E4 /* Assets.xcassets in Resources */,
+				2810ABFA228820A200B2F7EE /* TableViewCell.xib in Resources */,
 				286ED4C5227C412E00946DF9 /* LaunchScreen.storyboard in Resources */,
 				286ED4D4227C49C300946DF9 /* GoogleService-Info.plist in Resources */,
 				286ED4C0227C412C00946DF9 /* Main.storyboard in Resources */,
@@ -227,9 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				282BCC4E227C4AF700D392E4 /* RegisterController.swift in Sources */,
 				282BCC4C227C4AD600D392E4 /* ViewUebersicht.swift in Sources */,
 				286ED4BD227C412C00946DF9 /* ViewController.swift in Sources */,
+				2810ABF9228820A200B2F7EE /* TableViewCell.swift in Sources */,
 				282BCC4A227C4AB600D392E4 /* ViewLogin.swift in Sources */,
 				286ED4BB227C412C00946DF9 /* AppDelegate.swift in Sources */,
 			);
