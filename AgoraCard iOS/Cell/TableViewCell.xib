@@ -15,31 +15,35 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="AgoraCard_iOS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpI-oL-amb">
-                        <rect key="frame" x="16" y="12" width="123" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="123" id="klP-kN-O0V"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="19"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpI-oL-amb">
+                        <rect key="frame" x="16" y="11" width="127" height="22"/>
+                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMu-yM-KoV">
-                        <rect key="frame" x="257" y="11" width="47" height="22"/>
-                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="19"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMu-yM-KoV">
+                        <rect key="frame" x="195" y="11" width="109" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="109" id="apK-JD-2hZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.14323331559999999" green="0.79725955309999996" blue="0.67579718099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="dMu-yM-KoV" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="08M-25-MYm"/>
-                    <constraint firstItem="dMu-yM-KoV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="DEh-px-scm"/>
-                    <constraint firstItem="zpI-oL-amb" firstAttribute="baseline" secondItem="dMu-yM-KoV" secondAttribute="baseline" id="DoQ-Gi-2QV"/>
-                    <constraint firstItem="zpI-oL-amb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="p6A-OH-NeF"/>
+                    <constraint firstItem="zpI-oL-amb" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Dh9-pk-f0P"/>
+                    <constraint firstItem="zpI-oL-amb" firstAttribute="firstBaseline" secondItem="dMu-yM-KoV" secondAttribute="firstBaseline" id="HWu-rz-SlA"/>
+                    <constraint firstItem="zpI-oL-amb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Hff-oF-bZH"/>
+                    <constraint firstItem="dMu-yM-KoV" firstAttribute="leading" secondItem="zpI-oL-amb" secondAttribute="trailing" constant="52" id="PD0-1N-OBL"/>
+                    <constraint firstItem="zpI-oL-amb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="cfw-Nk-N95"/>
+                    <constraint firstItem="zpI-oL-amb" firstAttribute="baseline" secondItem="dMu-yM-KoV" secondAttribute="baseline" id="eys-Q2-fho"/>
+                    <constraint firstItem="dMu-yM-KoV" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="m8j-x7-hk6"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

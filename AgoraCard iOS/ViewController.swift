@@ -20,7 +20,6 @@ class ViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var eingabePassword: UITextField!
     @IBOutlet weak var eingabeRFID: UITextField!
-    @IBOutlet weak var buttonNFC: UIButton!
     @IBOutlet weak var buttonQR: UIButton!
     @IBOutlet weak var buttonLogin: UIButton!
     @IBOutlet weak var buttonRegister: UIButton!
@@ -86,7 +85,6 @@ class ViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         eingabeRFID.layer.cornerRadius = 20
         eingabePassword.layer.cornerRadius = 20
-        buttonNFC.layer.cornerRadius = 20
         buttonQR.layer.cornerRadius = 20
         buttonLogin.layer.cornerRadius = 20
         buttonRegister.layer.cornerRadius = 20
