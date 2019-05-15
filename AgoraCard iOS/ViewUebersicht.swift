@@ -45,9 +45,9 @@ class ViewUebersicht: UIViewController, UITableViewDelegate, UITableViewDataSour
         //set the firebase reference
         ref = Database.database().reference()
         
-        ref?.child("USER").child(user).child("Person").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref?.child("USER").child(user).child("Person").observeSingleEvent(of: .value, with: { (snap) in
             // Get user value
-            let value = snapshot.value as? NSDictionary
+            let value = snap.value as? NSDictionary
             let vorname = value?["Vorname"] as? String ?? ""
             let nachname = value?["Nachname"] as? String ?? " "
             let geburtsdatum = value?["Geburtsdatum"] as? String ?? " "
@@ -57,54 +57,38 @@ class ViewUebersicht: UIViewController, UITableViewDelegate, UITableViewDataSour
         }) { (error) in
             print(error.localizedDescription)
         }
- 
-        /*
-       ref?.child("USER").child(user).child("Training").observe(.value, with:{ (DataSnapshot) in
-            let post = DataSnapshot.value as? String
-            self.ref?.child(post!).observe(.childAdded, with:{(DataSnapshot) in
-                let valueData = DataSnapshot.value as? NSDictionary
-                let training = valueData?.value(forKey: "Name")
-                let daten = valueData?.value(forKey: "Date")
-                self.trainingData.append(training as! String)
-                self.dateDATA.append(daten as! String)
-            })
-        })
- */
         
-        
-        //let userID = Auth.auth().currentUser?.uid
         ref?.child("USER").child(user).child("Training").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let valueData = snapshot.value as? NSDictionary
             let keys = valueData?.allKeys
+            
             for (value) in keys!{
                 self.ref?.child("USER").child(self.user).child("Training").child(value as! String).observeSingleEvent(of: .value, with: { (shot) in
                     let valueData2 = shot.value as? NSDictionary
-                   // for(suchen) in valueData2!{
-                       // let training = suchen.key as? String ?? ""
-                       // let date = suchen.value as? String ?? ""
+                    
+                        //var dataArray = [String]()
                     
                         let training = valueData2?["Name"] as! String
                         let date = valueData2?["Date"] as! String
+                    
+                        //dataArray.append(training)
+                        //dataArray.append(date)
+                        //dataArray.sort()
                 
                         self.trainingData.append(training)
                         self.dateData.append(date)
-               
-                 //   }
-                })
+                        self.tableView.reloadData()
+                    
+                }){ (error) in
+                    print(error.localizedDescription)
+                }
             }//END
-            
-            
         }) { (error) in
             print(error.localizedDescription)
         }
-        
-        self.trainingData.append("Englisch")
-        self.dateData.append("11.11.11111")
     }
-    
 
-    
     //Tabelle
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return trainingData.count
@@ -119,7 +103,6 @@ class ViewUebersicht: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
     }
-    
     
     @IBAction func buttonLogout(_ sender: Any) {
         //Preferences
